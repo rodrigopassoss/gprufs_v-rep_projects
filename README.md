@@ -1,4 +1,4 @@
-# Modelos e Cenas do CoppeliaSim (V-REP)
+![image](https://github.com/user-attachments/assets/6a9090fb-8835-4ad3-8c9c-9c527b366280)# Modelos e Cenas do CoppeliaSim (V-REP)
 Este repositório contém modelos de robôs e cenas do simulador CoppeliaSim (V-REP), com comunicação através do ROS 2. 
 
 Os modelos:
@@ -18,5 +18,8 @@ As cenas de simulação:
 | [BubbleRobotDoNotCollide](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/scenes/BubbleRobotDoNotCollide.ttt)  | Cena para simulação do Bubble Robot, um simples robô de tração diferencial disponível no CoppeliaSim. Um controlador que pode ser usado para teste, chamado `walk` está disponível em [py_bubbleRobotController](https://github.com/rodrigopassoss/gprufs_ros2_packages/tree/main/py_bubbleRobotController). O comando para usar o controlador é: `ros2 run py_bubbleRobotController walk`.| 
 | [calmaN](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/scenes/CalmaN.ttt)  | Cena para simulação do calmaN, robô desenvolvido no GPRUFS. Pacotes para utilizar junto com essa simulação estão disponíveis em [py_calmaN](https://github.com/rodrigopassoss/gprufs_ros2_packages/tree/main/py_calmaN). | 
 | [Teste com Câmera](ros2InterfaceTopicPublisherAndSubscriber-lua.ttt)  | Cena para simulação da Câmera. Essa cena foi preparada para ser usada junto com o pacote [py_camera](https://github.com/rodrigopassoss/gprufs_ros2_packages/tree/main/py_camera), utilizando o comando `ros2 run py_camera camera_sub`| 
+
+Exemplo de Cena:
+
 
 
