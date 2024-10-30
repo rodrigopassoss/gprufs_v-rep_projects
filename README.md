@@ -48,9 +48,9 @@ Para editar o script de simulação, basta clicar duas vezes no ícone de script
 O exemplo da Figura é o [calmaN](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/scenes/CalmaN.ttt), o script associado é apresentado abaixo:
 
 
-<div style="height: 400px; overflow-y: scroll;">
+<div style="height: 400px; overflow-y: scroll;">```
 <pre>
-<code>
+<code> 
 --lua
 
 sim=require'sim'
@@ -202,7 +202,7 @@ end
 
 </code>
 </pre>
-</div>
+```</div>
 
 # Convertendo a Imagem 2D de um Mapa em um Objeto 3D
 
