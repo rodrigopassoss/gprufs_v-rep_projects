@@ -204,6 +204,16 @@ end
 </pre>
 </div>
 
+As funções `sysCall_init()` e `sysCall_cleanup()` são executadas apenas uma vez, na inicialização e na finalização, respectivamente. As funções `sysCall_sensing()` e `sysCall_actuation()` são executadas a cada instante de amostragem da simulação, e são usadas para simular os sensores e atuadores, respectivamente. As demais funções são funções auxiliares. No 
+
+<pre>```
+-- Prepare the sensor publisher and the motor speed subscribers:
+encoderPub=simROS2.createPublisher('/'..EncoderTopicName,'geometry_msgs/msg/Twist')
+lidarPub=simROS2.createPublisher('/'..LidarTopicName,'sensor_msgs/msg/LaserScan')
+simTimePub=simROS2.createPublisher('/'..simulationTimeTopicName,'std_msgs/msg/Float32')
+velSub=simROS2.createSubscription('/'..VelTopicName,'geometry_msgs/msg/Twist','setMotorVelocity_cb')
+```</pre>
+
 
 # Convertendo a Imagem 2D de um Mapa em um Objeto 3D
 
