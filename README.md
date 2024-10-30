@@ -48,7 +48,7 @@ No loboratório de robótica da UFS, em alguns experimentos captamos as posiçõ
 </div>
 
 
-Para gerar o arquivo `.obj`, é preciso representar os objetos como composição de paralelepípedos, fornecer os vértices de cada um desses paralelepípedos e indicar a as faces. Na figura abaixo pode ser visto um exemplo dos vértices obtidos da imagem 2D para conversão:
+Para gerar o arquivo `.obj`, é preciso representar os objetos como composição de paralelepípedos, fornecer os vértices de cada um desses paralelepípedos e indicar a as faces. Na figura abaixo pode ser visto um exemplo dos vértices obtidos da imagem 2D para conversão usando o código `image_to_obstacle_mesh.m`:
 
 <div align="center">
 <img src="https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/vertices.png" alt="vertices" width="50%">
