@@ -48,7 +48,9 @@ Para editar o script de simulação, basta clicar duas vezes no ícone de script
 O exemplo da Figura é o [calmaN](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/scenes/CalmaN.ttt), o script associado é apresentado abaixo:
 
 
-<pre> ```
+<div style="height: 400px; overflow-y: scroll;">
+<pre>
+<code>
 --lua
 
 sim=require'sim'
@@ -198,7 +200,9 @@ function sysCall_cleanup()
     simROS2.shutdownSubscription(velSub)
 end
 
-``` </pre>
+</code>
+</pre>
+</div>
 
 # Convertendo a Imagem 2D de um Mapa em um Objeto 3D
 
