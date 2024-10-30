@@ -45,7 +45,160 @@ Para editar o script de simulação, basta clicar duas vezes no ícone de script
 
 </div>
 
+O exemplo da Figura é o [calmaN](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/scenes/CalmaN.ttt), o script associado é apresentado abaixo:
 
+
+<pre> ```
+--lua
+
+sim=require'sim'
+simROS2=require'simROS2'
+
+function sysCall_init()
+    robotHandle=sim.getObject('.')
+    leftMotor=sim.getObject("./LeftMotor") -- Handle of the left motor
+    rightMotor=sim.getObject("./RightMotor") -- Handle of the right motor
+    lidarMotor=sim.getObject("./LidarMotor") -- Handle of the lidar motor
+    Lidar = sim.getObject("./LidarMotor/LidarScan/Sensor") -- Handle of the lidar sensor
+    drawingCont=sim.addDrawingObject(sim.drawing_linestrip+sim.drawing_cyclic,2,0,-1,200,{1,1,0},nil,nil,{1,1,0})
+
+    -- Variaveis do Lidar 
+    MotorLidarSpeed = 6*(2*math.pi) --360.0*5
+    angle_min = 0.0
+    angle_max =  2*math.pi
+    angle_curr = 0.0
+    scan_time = 0.0
+    range_min = 0.12
+    range_max = 2.0
+    contador = 1
+    ranges = {}
+    local result, distance = sim.readProximitySensor(Lidar)
+    ranges[1] = distance
+    scan_data={}
+    -- Launch the ROS2 client application:
+    local VelTopicName='robot/cmd_vel'
+    local EncoderTopicName='robot/encoder'
+    local LidarTopicName='robot/lidar'
+    local simulationTimeTopicName='robot/simTime'
+    -- Prepare the sensor publisher and the motor speed subscribers:
+    encoderPub=simROS2.createPublisher('/'..EncoderTopicName,'geometry_msgs/msg/Twist')
+    lidarPub=simROS2.createPublisher('/'..LidarTopicName,'sensor_msgs/msg/LaserScan')
+    simTimePub=simROS2.createPublisher('/'..simulationTimeTopicName,'std_msgs/msg/Float32')
+    velSub=simROS2.createSubscription('/'..VelTopicName,'geometry_msgs/msg/Twist','setMotorVelocity_cb')
+
+end
+
+function setMotorVelocity_cb(msg)
+    -- Left motor speed subscriber callback
+    sim.setJointTargetVelocity(leftMotor,msg.angular.x)
+    -- Right motor speed subscriber callback
+    sim.setJointTargetVelocity(rightMotor,msg.angular.y)
+end
+
+
+function getTransformStamped(objHandle,name,relTo,relToName)
+    t=sim.getSystemTime()
+    p=sim.getObjectPosition(objHandle,relTo)
+    o=sim.getObjectQuaternion(objHandle,relTo)
+    return {
+        header={
+            stamp={sec=math.floor(t),nanosec=(t-math.floor(t))*10^9},
+            frame_id=relToName
+        },
+        child_frame_id=name,
+        transform={
+            translation={x=p[1],y=p[2],z=p[3]},
+            rotation={x=o[1],y=o[2],z=o[3],w=o[4]}
+        }
+    }
+end
+
+function getAngleIncrement()
+    local result,W
+    W = sim.getObjectFloatParam(lidarMotor,sim.jointfloatparam_velocity)
+    delta_time = sim.getSimulationTimeStep()
+    delta_theta = W*delta_time
+    return delta_theta, delta_time
+end
+
+function getLidarMeasurements()
+    local delta_theta, delta_time, result, distance
+    delta_theta, delta_time = getAngleIncrement()
+    if (angle_curr + delta_theta) > angle_max then
+       angle_curr = (angle_curr + delta_theta) - angle_max
+       scan_time = 0.0
+       contador = 1
+       result, distance = sim.readProximitySensor(Lidar)
+       --if distance<=0.0 or distance>2.0 then
+       --     ranges[contador] = 2.0
+       --else
+            ranges[contador] = distance
+       --end
+       simROS2.publish(lidarPub,scan_data) 
+    else
+        angle_curr = angle_curr + delta_theta
+        scan_time = scan_time + delta_time
+        contador = contador + 1
+        result, distance = sim.readProximitySensor(Lidar)
+        --if distance<=0.0 or distance>2.0 then
+        --    ranges[contador] = 2.0
+        --else
+            ranges[contador] = distance
+        --end 
+    end
+    -- 
+    --local scan_data={}
+    scan_data['header'] = {
+        stamp = simROS2.getTime(),
+        frame_id = 'lidar_frame'}
+    scan_data['angle_min']=angle_min 
+    scan_data['angle_max']=angle_max 
+    scan_data['angle_increment']=delta_theta 
+    scan_data['time_increment']=delta_time 
+    scan_data['scan_time']=scan_time 
+    scan_data['range_min']=range_min 
+    scan_data['range_max']=range_max 
+    scan_data['ranges']=ranges
+    --simROS2.publish(lidarPub,scan_data) 
+
+end
+
+function getEncoderMeasurements()
+
+    local wL,wR
+    wL = sim.getObjectFloatParam(leftMotor,sim.jointfloatparam_velocity)
+    wR = sim.getObjectFloatParam(rightMotor,sim.jointfloatparam_velocity)
+    local encoder_data = {linear = {x = 0, y = 0, z = 0}, angular = {x = 0, y = 0, z = 0}}
+    encoder_data.angular.x = wL
+    encoder_data.angular.y = wR
+    simROS2.publish(encoderPub,encoder_data)
+end
+
+function sysCall_sensing() 
+    local p=sim.getObjectPosition(robotHandle)
+    sim.addDrawingObjectItem(drawingCont,p)
+    getLidarMeasurements()
+    getEncoderMeasurements()
+end 
+
+function sysCall_actuation()
+    -- Define a velocidade do Motor do Lidar
+    sim.setJointTargetVelocity(lidarMotor,MotorLidarSpeed) --360*8
+    simROS2.publish(simTimePub,{data=sim.getSimulationTime()})
+    -- Send the robot's transform:
+    simROS2.sendTransform(getTransformStamped(robotHandle,'ros2InterfaceControlledBubbleRob',-1,'world'))
+    -- To send several transforms at once, use simROS2.sendTransforms instead
+end
+
+function sysCall_cleanup()
+    -- Following not really needed in a simulation script (i.e. automatically shut down at simulation end):
+    simROS2.shutdownPublisher(encoderPub)
+    simROS2.shutdownPublisher(lidarPub)
+    simROS2.shutdownPublisher(simTimePub)
+    simROS2.shutdownSubscription(velSub)
+end
+
+``` </pre>
 
 # Convertendo a Imagem 2D de um Mapa em um Objeto 3D
 
