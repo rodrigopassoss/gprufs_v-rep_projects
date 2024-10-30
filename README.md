@@ -37,11 +37,16 @@ Note que as cenas possuem dois tipos de objetos principais: Obstáculos e Robôs
 
 # Convertendo a Imagem 2D de um Mapa em um Objeto 3D
 
-No loboratório de robótica da UFS, em alguns experimentos captamos as posições dos obstáculos usando câmera, resultando em um bitmap 2D do mapa. Dessa forma, para usar essa informação de forma simples e direta no CoppeliaSim, foi desenvolvido um código em MATLAB que converte a imagem do mapa em um arquivo `.obj`. Um exemplo é apresentado na figura abaixo.
+No loboratório de robótica da UFS, em alguns experimentos captamos as posições dos obstáculos usando câmera, resultando em um bitmap 2D do mapa. Dessa forma, para usar essa informação de forma simples e direta no CoppeliaSim, foi desenvolvido um código em MATLAB que converte a imagem do mapa em um arquivo `.obj`. Um exemplo é apresentado na figuras abaixos.
 
 |Imagem 2D| Conversão em 3D|
 |------------------------------|------------------------------|
 | ![Imagem 1](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/g1092.png) | ![Imagem 2](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/mapa01.png) |
+
+Para gerar o arquivo `.obj`, é preciso representar os objetos como composição de paralelepípedos, fornecer os vértices de cada um desses paralelepípedos e indicar a as faces. Na figura abaixo pode ser visto um exemplo dos vértices obtidos da imagem 2D para conversão:
+
+![Imagem](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/vertices.png) 
+
 
 
 
