@@ -5,6 +5,6 @@ Este repositório contém modelos de robôs e cenas do simulador CoppeliaSim (V-
 
 | Modelo       | Descrição       |
 |----------------------|-------------------------|
-| calmaN     | Modelo em 3d de uma versão protótipo do calmaN, desenvolvido no GPRUFS, com a simulação de um Lidar| 
+| [calmaN](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/models/calmaN.obj)     | Modelo em 3d de uma versão protótipo do calmaN, desenvolvido no GPRUFS, com a simulação de um Lidar| 
 
 </div>
