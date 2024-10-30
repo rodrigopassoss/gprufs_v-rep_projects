@@ -24,7 +24,7 @@ As cenas de simulação:
 </div>
 
 
-Exemplo de Cena (BubbleRobotDoNotCollide):
+##Exemplo de Cena (BubbleRobotDoNotCollide):
 
 <div align="center">
 
@@ -212,7 +212,7 @@ velSub=simROS2.createSubscription('/'..VelTopicName,'geometry_msgs/msg/Twist','s
 
 As informações dos sensores são publicadas nos tópicos do ROS 2 sempre que a função `sysCall_sensing()` é chamada, por meio das funções `getLidarMeasurements()` e `getEncoderMeasurements()`. Já os dados de velocidades são atualizadas via *callback*, com a função `setMotorVelocity_cb(msg)`.
 
-# Convertendo a Imagem 2D de um Mapa em um Objeto 3D
+## Convertendo a Imagem 2D de um Mapa em um Objeto 3D
 
 No loboratório de robótica da UFS, em alguns experimentos, captamos as posições dos obstáculos usando câmera, resultando em um bitmap 2D do mapa. Dessa forma, para usar essa informação de forma simples e direta no CoppeliaSim, foi desenvolvido um código em MATLAB que converte a imagem do mapa em um arquivo `.obj`. Um exemplo é apresentado na figuras abaixo.
 
