@@ -33,5 +33,9 @@ Exemplo de Cena (BubbleRobotDoNotCollide):
 
 </div>
 
-Note que as cenas possuem dois elementos principais
+Note que as cenas possuem dois tipos de objetos principais: Obstáculos e Robôs. Ambos são modelos 3d que podem ser gerados a partir de arquivos `.obj`, isto é, em posso de modelos 3d dos robôs é possível importar esses robôs para a plataforma. Da mesma forma, com modelos 3d dos obstáculos é possível adicioná-los a cena.
+
+# Convertendo a Imagem 2D de um Mapa em um Objeto 3D
+
+
 
