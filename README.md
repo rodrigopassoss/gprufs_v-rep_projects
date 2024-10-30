@@ -54,6 +54,11 @@ Para gerar o arquivo `.obj`, é preciso representar os objetos como composição
 <img src="https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/vertices.png" alt="vertices" width="50%">
 </div>
 
+O código `image_to_obstacle_mesh.m` implementa a função `image_to_obstacle(image_path, output_mesh_path, pixel_to_meter_ratio, obstacle_height)`. 
+* `image_path` é o diretório da imagem
+* `output_mesh_path` o diretório do arquivo `.obj`
+* `pixel_to_meter_ratio` é a relação que define a escala entre pixel e metros, por exemplo `pixel_to_meter_ratio=0.1`, significa que o lado de um pixel equivale a 0,1 m na realidade.
+* `obstacle_height` define a altura em unidades de pixel.
 
 
 
