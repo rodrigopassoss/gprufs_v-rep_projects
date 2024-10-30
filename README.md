@@ -22,6 +22,7 @@ As cenas de simulação:
 Exemplo de Cena:
 
 ![cena_exemplo](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/cena_exemplo.png)
+<img src="https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/cena_exemplo.png" alt="cena_exemplo" width="50%">
 
 
 
