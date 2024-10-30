@@ -40,6 +40,7 @@ Note que as cenas possuem dois tipos de objetos principais: Obstáculos e Robôs
 No loboratório de robótica da UFS, em alguns experimentos captamos as posições dos obstáculos usando câmera, resultando em um bitmap 2D do mapa. Dessa forma, para usar essa informação de forma simples e direta no CoppeliaSim, foi desenvolvido um código em MATLAB que converte a imagem do mapa em um arquivo `.obj`. Um exemplo é apresentado na figura abaixo.
 
 |Imagem 2D| Conversão em 3D|
+|------------------------------|------------------------------|
 | ![Imagem 1](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/g1092.png) | ![Imagem 2](URL-da-imagem-2) |
 |------------------------------|------------------------------|
 
