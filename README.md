@@ -42,7 +42,6 @@ No loboratório de robótica da UFS, em alguns experimentos captamos as posiçõ
 |Imagem 2D| Conversão em 3D|
 |------------------------------|------------------------------|
 | ![Imagem 1](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/g1092.png) | ![Imagem 2](URL-da-imagem-2) |
-|------------------------------|------------------------------|
 
 
 
