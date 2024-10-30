@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6a9090fb-8835-4ad3-8c9c-9c527b366280)# Modelos e Cenas do CoppeliaSim (V-REP)
+# Modelos e Cenas do CoppeliaSim (V-REP)
 Este repositório contém modelos de robôs e cenas do simulador CoppeliaSim (V-REP), com comunicação através do ROS 2. 
 
 Os modelos:
@@ -20,6 +20,8 @@ As cenas de simulação:
 | [Teste com Câmera](ros2InterfaceTopicPublisherAndSubscriber-lua.ttt)  | Cena para simulação da Câmera. Essa cena foi preparada para ser usada junto com o pacote [py_camera](https://github.com/rodrigopassoss/gprufs_ros2_packages/tree/main/py_camera), utilizando o comando `ros2 run py_camera camera_sub`| 
 
 Exemplo de Cena:
+
+[cena_exemplo](https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/cena_exemplo.png)
 
 
 
