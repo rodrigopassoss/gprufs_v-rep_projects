@@ -23,7 +23,7 @@ As cenas de simulação:
 
 </div>
 
-* Obs.: Cada cena contém scripts em lua (uma linguagem de programação brasileira!), que configura os nós e os tópicos do ROS 2 que vão se comunicar com os códigos em python ([gprufs_ros2_packages](https://github.com/rodrigopassoss/gprufs_ros2_packages)) e Matlab/Octave [gprufs_ros2_udp](https://github.com/rodrigopassoss/gprufs_ros2_udp). Um tutorial sobre como usar o ROS 2 no CoppeliaSim e como configurar o script para interface com os tópicos é disponibilizado pela própria equipe do Coppelia e pode ser acessado [aqui](https://manual.coppeliarobotics.com/).
+* Obs.: Cada cena contém scripts em lua (uma linguagem de programação brasileira!), que configura os nós e os tópicos do ROS 2 que vão se comunicar com os códigos em python ([gprufs_ros2_packages](https://github.com/rodrigopassoss/gprufs_ros2_packages)) e Matlab/Octave ([gprufs_ros2_udp](https://github.com/rodrigopassoss/gprufs_ros2_udp)). Um tutorial sobre como usar o ROS 2 no CoppeliaSim e como configurar o script para interface com os tópicos é disponibilizado pela própria equipe do Coppelia e pode ser acessado [aqui](https://manual.coppeliarobotics.com/).
 
 Exemplo de Cena (BubbleRobotDoNotCollide):
 
