@@ -217,7 +217,7 @@ velSub=simROS2.createSubscription('/'..VelTopicName,'geometry_msgs/msg/Twist','s
 
 # Convertendo a Imagem 2D de um Mapa em um Objeto 3D
 
-No loboratório de robótica da UFS, em alguns experimentos captamos as posições dos obstáculos usando câmera, resultando em um bitmap 2D do mapa. Dessa forma, para usar essa informação de forma simples e direta no CoppeliaSim, foi desenvolvido um código em MATLAB que converte a imagem do mapa em um arquivo `.obj`. Um exemplo é apresentado na figuras abaixo.
+No loboratório de robótica da UFS, em alguns experimentos, captamos as posições dos obstáculos usando câmera, resultando em um bitmap 2D do mapa. Dessa forma, para usar essa informação de forma simples e direta no CoppeliaSim, foi desenvolvido um código em MATLAB que converte a imagem do mapa em um arquivo `.obj`. Um exemplo é apresentado na figuras abaixo.
 
 <div align="center">
 
