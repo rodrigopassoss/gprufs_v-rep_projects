@@ -214,7 +214,7 @@ simTimePub=simROS2.createPublisher('/'..simulationTimeTopicName,'std_msgs/msg/Fl
 velSub=simROS2.createSubscription('/'..VelTopicName,'geometry_msgs/msg/Twist','setMotorVelocity_cb')
 </pre>
 
-As informações dos sensores são publicadas sempre que a função `sysCall_sensing()` é chamada 
+As informações dos sensores são publicadas nos tópicos do ROS 2 sempre que a função `sysCall_sensing()` é chamada, por meio das funções `getLidarMeasurements()` e `getEncoderMeasurements()`. Já os dados de velocidades são atualizadas via *callback*, com a função `setMotorVelocity_cb(msg)`.
 
 # Convertendo a Imagem 2D de um Mapa em um Objeto 3D
 
