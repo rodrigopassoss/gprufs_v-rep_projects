@@ -63,7 +63,6 @@ function sysCall_init()
     lidarMotor=sim.getObject("./LidarMotor") -- Handle of the lidar motor
     Lidar = sim.getObject("./LidarMotor/LidarScan/Sensor") -- Handle of the lidar sensor
     drawingCont=sim.addDrawingObject(sim.drawing_linestrip+sim.drawing_cyclic,2,0,-1,200,{1,1,0},nil,nil,{1,1,0})
-
     -- Variaveis do Lidar 
     MotorLidarSpeed = 6*(2*math.pi) --360.0*5
     angle_min = 0.0
