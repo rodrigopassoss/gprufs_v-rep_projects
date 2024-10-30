@@ -87,7 +87,6 @@ function sysCall_init()
     lidarPub=simROS2.createPublisher('/'..LidarTopicName,'sensor_msgs/msg/LaserScan')
     simTimePub=simROS2.createPublisher('/'..simulationTimeTopicName,'std_msgs/msg/Float32')
     velSub=simROS2.createSubscription('/'..VelTopicName,'geometry_msgs/msg/Twist','setMotorVelocity_cb')
-
 end
 
 function setMotorVelocity_cb(msg)
@@ -96,7 +95,6 @@ function setMotorVelocity_cb(msg)
     -- Right motor speed subscriber callback
     sim.setJointTargetVelocity(rightMotor,msg.angular.y)
 end
-
 
 function getTransformStamped(objHandle,name,relTo,relToName)
     t=sim.getSystemTime()
@@ -162,11 +160,9 @@ function getLidarMeasurements()
     scan_data['range_max']=range_max 
     scan_data['ranges']=ranges
     --simROS2.publish(lidarPub,scan_data) 
-
 end
 
 function getEncoderMeasurements()
-
     local wL,wR
     wL = sim.getObjectFloatParam(leftMotor,sim.jointfloatparam_velocity)
     wR = sim.getObjectFloatParam(rightMotor,sim.jointfloatparam_velocity)
