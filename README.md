@@ -23,7 +23,7 @@ As cenas de simulação:
 
 </div>
 
-* Obs.: Cada cena contém scripts em lua (uma linguagem de programação brasileira!), que configura os nós e os tópicos do ROS 2 que vão se comunicar com os códigos em python ([gprufs_ros2_packages](https://github.com/rodrigopassoss/gprufs_ros2_packages)) e Matlab/Octave ([gprufs_ros2_udp](https://github.com/rodrigopassoss/gprufs_ros2_udp)). Um tutorial sobre como usar o ROS 2 no CoppeliaSim e como configurar o script para interface com os tópicos é disponibilizado pela própria equipe do Coppelia e pode ser acessado [aqui](https://manual.coppeliarobotics.com/).
+* Obs.: Cada cena contém scripts em lua (uma linguagem de programação brasileira!), que configura os nós e os tópicos do ROS 2 que vão se comunicar com os códigos em python ([gprufs_ros2_packages](https://github.com/rodrigopassoss/gprufs_ros2_packages)) e Matlab/Octave ([gprufs_ros2_udp](https://github.com/rodrigopassoss/gprufs_ros2_udp)). Um tutorial sobre como usar o ROS 2 no CoppeliaSim e como configurar o script para interface com os tópicos é disponibilizado pela própria equipe do Coppelia e pode ser acessado [aqui](https://manual.coppeliarobotics.com/) (Tutorials->ROS Tutorial->ROS 2 Tutorial).
 
 Exemplo de Cena (BubbleRobotDoNotCollide):
 
@@ -36,6 +36,9 @@ Exemplo de Cena (BubbleRobotDoNotCollide):
 Note que as cenas possuem dois tipos de objetos principais: Obstáculos e Robôs. Ambos são modelos 3d que podem ser gerados a partir de arquivos `.obj`, isto é, em posso de modelos 3d dos robôs é possível importar esses robôs para a plataforma. Da mesma forma, com modelos 3d dos obstáculos é possível adicioná-los a cena.
 
 # Convertendo a Imagem 2D de um Mapa em um Objeto 3D
+
+
+
 
 
 
