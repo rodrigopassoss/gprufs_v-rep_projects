@@ -1,5 +1,5 @@
 # Modelos e Cenas do CoppeliaSim (V-REP)
-Este repositório contém modelos de robôs e cenas do simulador CoppeliaSim (V-REP), com comunicação através do ROS 2. 
+Este repositório contém modelos de robôs e cenas do simulador [CoppeliaSim (V-REP)](https://manual.coppeliarobotics.com/), com comunicação através do [ROS 2](https://docs.ros.org/en/humble/Installation.html). 
 
 Os modelos:
 
