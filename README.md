@@ -35,6 +35,11 @@ Exemplo de Cena (BubbleRobotDoNotCollide):
 
 Note que as cenas possuem dois tipos de objetos principais: Obstáculos e Robôs. Ambos são modelos 3d que podem ser gerados a partir de arquivos `.obj`, isto é, em posso de modelos 3d dos robôs é possível importar esses robôs para a plataforma. Da mesma forma, com modelos 3d dos obstáculos é possível adicioná-los a cena.
 
+# Exemplo de Script de Simulação em Lua
+
+![image](https://github.com/user-attachments/assets/72c96800-cf18-4fb9-ba2e-fdd21a83c6a8)
+
+
 # Convertendo a Imagem 2D de um Mapa em um Objeto 3D
 
 No loboratório de robótica da UFS, em alguns experimentos captamos as posições dos obstáculos usando câmera, resultando em um bitmap 2D do mapa. Dessa forma, para usar essa informação de forma simples e direta no CoppeliaSim, foi desenvolvido um código em MATLAB que converte a imagem do mapa em um arquivo `.obj`. Um exemplo é apresentado na figuras abaixo.
