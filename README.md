@@ -24,7 +24,7 @@ As cenas de simulação:
 </div>
 
 
-Exemplo de Cena:
+Exemplo de Cena (BubbleRobotDoNotCollide):
 
 <div align="center">
 
