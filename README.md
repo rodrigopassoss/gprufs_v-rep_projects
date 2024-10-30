@@ -29,7 +29,7 @@ Exemplo de Cena (BubbleRobotDoNotCollide):
 
 <div align="center">
 
-<img src="https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/cena_exemplo.png" alt="cena_exemplo" width="50%">
+<img src="https://github.com/rodrigopassoss/gprufs_v-rep_projects/blob/main/cena_exemplo.png" alt="cena_exemplo" width="75%">
 
 </div>
 
