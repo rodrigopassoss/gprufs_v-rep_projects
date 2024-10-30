@@ -37,11 +37,15 @@ Note que as cenas possuem dois tipos de objetos principais: Obstáculos e Robôs
 
 # Exemplo de Script de Simulação em Lua
 
+Para editar o script de simulação, basta clicar duas vezes no ícone de script indicado na figura abaixo.  
+
 <div align="center">
 
 <img src="https://github.com/user-attachments/assets/aa6abaae-6e5b-496a-94c0-68b21ee85b04" alt="cena_exemplo" width="75%">
 
 </div>
+
+
 
 # Convertendo a Imagem 2D de um Mapa em um Objeto 3D
 
