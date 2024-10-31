@@ -239,7 +239,7 @@ O código `image_to_obstacle_mesh.m` implementa a função `image_to_obstacle(im
 
 ## Como Usar as Cenas desse Repositório? 
 
-Esse repositório pode ser clonado em qualquer diretorio. Na interface do simulador, vá em *File->Open Scene...*, ao fazer isso uma janela se abrirá, de modo que basta buscar no explorador de arquivos o diretório em que foi clonado o repositório e, por fim, selecionar a cena.
+Esse repositório pode ser clonado em qualquer diretorio. Na interface do simulador, vá em *File->Open Scene...*, ao fazer isso uma janela se abrirá, de modo que basta buscar no explorador de arquivos o diretório em que foi clonado o repositório e, por fim, selecionar a cena. Caso você tenha outras dúvidas acesse o manual oficial do [CoppeliaSim](https://manual.coppeliarobotics.com/).
 
 
 
