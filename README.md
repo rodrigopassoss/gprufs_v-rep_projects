@@ -237,6 +237,11 @@ O código `image_to_obstacle_mesh.m` implementa a função `image_to_obstacle(im
 * `pixel_to_meter_ratio` é a relação que define a escala entre pixel e metros, por exemplo `pixel_to_meter_ratio=0.1`, significa que o lado de um pixel equivale a 0,1 m na realidade.
 * `obstacle_height` define a altura em unidades de pixel.
 
+## Como Usar as Cenas desse Repositório? 
+
+Esse repositório pode ser clonado em qualquer diretorio. Na interface do simulador, vá em *File->Open Scene...*, ao fazer isso uma janela se abrirá, de modo que basta buscar no explorador de arquivos o diretório em que foi clonado o repositório e, por fim, selecionar a cena.
+
+
 
 
 
